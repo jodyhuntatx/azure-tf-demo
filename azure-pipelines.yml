@@ -1,0 +1,14 @@
+pool: NewPool
+
+variables:
+- group: azure-build-vars
+
+steps:
+- task: DownloadSecureFile@1
+  name: conjurCert
+  displayName: 'Download CA certificate'
+  inputs:
+    secureFile: 'conjur-dev.pem'
+
+- bash: |
+    summon terraform apply

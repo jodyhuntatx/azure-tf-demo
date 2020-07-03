@@ -1,7 +1,7 @@
 pool: NewPool
 
 variables:
-- group: azure-build-vars
+- group: build-vars-tf
 
 steps:
 - task: DownloadSecureFile@1

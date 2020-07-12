@@ -1,19 +1,19 @@
-variable "DB_UNAME" {
-  description = "Database user name"
+variable "GITBOT_UNAME" {
+  description = "GitBot user name"
   default = "default"
 }
 
-variable "DB_PWD" {
-  description = "Database password"
+variable "GITBOT_TOKEN" {
+  description = "Gitbot token"
   default = "default"
 }
 
-output "DB Password" {
+output "Gitbot token" {
   sensitive = true
-  value = "${var.DB_PWD}"
+  value = "${var.GITBOT_TOKEN}"
 }
 
-output "DB Uname" {
-  value = "${var.DB_UNAME}"
+output "Gitbot Uname" {
+  value = "${var.GITBOT_UNAME}"
 }
 

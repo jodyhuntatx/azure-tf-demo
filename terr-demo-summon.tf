@@ -9,7 +9,7 @@ variable "GITBOT_TOKEN" {
 }
 
 output "Gitbot token" {
-  sensitive = true
+#  sensitive = true
   value = "${var.GITBOT_TOKEN}"
 }
 
